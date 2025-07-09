@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spring Mass Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Spring Mass Simulator</h1>
+  <canvas id="springCanvas" width="600" height="400"></canvas>
+
+  <div class="controls">
+    <label>Mass:
+      <input type="range" id="massSlider" min="1" max="20" value="5">
+      <span id="massValue">5 kg</span>
+    </label>
+
+    <label>Stiffness (k):
+      <input type="range" id="stiffnessSlider" min="1" max="50" value="20">
+      <span id="stiffnessValue">20</span>
+    </label>
+
+    <label>Damping:
+      <input type="range" id="dampingSlider" min="0" max="1" step="0.01" value="0.05">
+      <span id="dampingValue">0.05</span>
+    </label>
+
+    <label>Gravity:
+      <input type="checkbox" id="gravityToggle" checked>
+    </label>
+
+    <button onclick="resetSpring()">Reset</button>
+
+    <div class="stats" id="statsDisplay">
+      Position: 0 px<br>
+      Velocity: 0 px/frame<br>
+      Acceleration: 0 px/frame²
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
